@@ -104,6 +104,11 @@
   border-bottom: 1px solid #ccc;
 }
 
+.box-container .header span{
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
 .button-primary{
   cursor: pointer;
   background: #03A9F4;

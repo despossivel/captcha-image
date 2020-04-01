@@ -26,11 +26,7 @@ function App() {
   const [totalSelecionavel] = useState(json[0].total)
   const [imgsSelecionadas, setImgsSelecionadas] = useState([])
 
-
-
-
-
-
+ 
   const removeSelected = useCallback((src) => {
     const rest = imgsSelecionadas.filter(item => {
       if (item === src) return false;
@@ -71,7 +67,7 @@ function App() {
     })
 
     return responseFilter;
-  }, [request, imgsSelecionadas, categoria, request])
+  }, [request, imgsSelecionadas, categoria])
 
 
   const handlerClick = useCallback(async () => {
@@ -93,7 +89,7 @@ function App() {
       setImgsSelecionadas([])
       console.error(error)
     }
-  }, [imgsSelecionadas, totalSelecionavel, categoria, setSuccess])
+  }, [imgsSelecionadas, totalSelecionavel, categoria, setSuccess, processImgs])
 
 
   const reload = useCallback(() => {
